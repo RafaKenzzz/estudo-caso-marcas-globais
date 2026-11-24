@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>IKEA: marca global, adaptação local · Estudo de Caso 1</title>
+  <meta name="description" content="Trabalho escolar sobre o IKEA como marca global: identidade, geografia da empresa, adaptação local em Portugal e na Índia, balanço crítico e fontes.">
+  <meta name="theme-color" content="#0058a3">
+  <link rel="icon" type="image/png" href="logo-recortado.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Avançar para o conteúdo principal</a>
+
+  <!-- Barra de mensagem -->
+  <div class="msgbar">
+    <div class="wrap msgbar__inner">
+      <p><strong>Trabalho escolar</strong> · Estudo de Caso 1 – Marcas Globais</p>
+      <a href="#aviso" class="msgbar__link">Não é um site oficial do IKEA</a>
+    </div>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header class="header" id="header">
+    <div class="wrap header__row">
+      <a href="#topo" class="logo" aria-label="IKEA – início do trabalho">
+        <img src="logo-recortado.png" alt="IKEA" width="90" height="37">
+      </a>
+
+      <nav class="mainnav" aria-label="Secções do trabalho">
+        <a href="#identidade">Identidade</a>
+        <a href="#geografia">Geografia</a>
+        <a href="#global-local">Global e local</a>
+        <a href="#balanco">Balanço crítico</a>
+        <a href="#fontes">Fontes</a>
+      </nav>
+
+      <div class="search" id="search">
+        <form class="search__form" role="search" id="searchForm" autocomplete="off">
+          <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+          <input type="search" id="searchInput" placeholder="O que procura? Ex.: Coimbra, Índia, FY25" aria-label="Procurar no trabalho" role="combobox" aria-expanded="false" aria-controls="searchPanel" aria-autocomplete="list">
+          <button type="button" class="search__clear" id="searchClear" aria-label="Limpar pesquisa" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </form>
+        <div class="search__panel" id="searchPanel" hidden>
+          <div class="search__popular" id="searchPopular">
+            <p class="search__title">Pesquisas populares</p>
+            <div class="search__chips" id="searchChips"></div>
+          </div>
+          <p class="search__title" id="searchResultsTitle" hidden>Resultados no trabalho</p>
+          <ul class="search__results" id="searchResults" role="listbox" aria-label="Resultados"></ul>
+        </div>
+      </div>
+
+      <div class="header__icons">
+        <button class="hej" type="button" data-open="about" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+          <span class="hej__txt"><span>Hej!</span> Sobre o trabalho</span>
+        </button>
+        <a class="icon-btn" href="#conclusao" aria-label="Conclusão do grupo" title="Conclusão">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.4a4.3 4.3 0 0 1 7.5 2.4C19.5 15.4 12 20 12 20Z"/></svg>
+        </a>
+        <a class="icon-btn" href="#fontes" aria-label="Ficha de fontes (13)" title="Fontes">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="icon-btn__badge">13</span>
+        </a>
+        <button class="icon-btn header__menu" type="button" aria-label="Abrir menu" data-open="drawer" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="wrap header__util">
+      <button class="util" type="button" data-open="about">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        Pesquisa feita a <strong>29 out. 2026</strong>
+      </button>
+      <button class="util" type="button" data-fy>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <strong>FY25</strong> = set. 2024 – ago. 2025
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu (mobile) -->
+  <div class="sheet sheet--left" id="drawer" role="dialog" aria-modal="true" aria-label="Menu" inert>
+    <div class="sheet__panel">
+      <div class="sheet__head">
+        <img src="logo-recortado.png" alt="IKEA" width="76" height="31">
+        <button class="icon-btn" type="button" aria-label="Fechar menu" data-close>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <nav class="drawer__nav" aria-label="Secções">
+        <a href="#identidade"><span>1</span>Identidade e percurso</a>
+        <a href="#geografia"><span>2</span>Geografia da empresa</a>
+        <a href="#global-local"><span>3</span>Global e local</a>
+        <a href="#balanco"><span>4</span>Balanço crítico</a>
+        <a href="#fontes"><span>5</span>Evidências e fontes</a>
+      </nav>
+      <nav class="drawer__sub" aria-label="Atalhos">
+        <a href="#conclusao">Conclusão do grupo</a>
+        <a href="#mapa">Mapa</a>
+        <a href="#por-confirmar">O que não conseguimos confirmar</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Painel "Hej!" -->
+  <div class="sheet sheet--right" id="about" role="dialog" aria-modal="true" aria-labelledby="aboutTitle" inert>
+    <div class="sheet__panel">
+      <div class="sheet__head">
+        <span class="sheet__kicker">Sobre o trabalho</span>
+        <button class="icon-btn" type="button" aria-label="Fechar" data-close>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <h2 class="about__title" id="aboutTitle">Hej! Bem-vindo ao nosso estudo de caso.</h2>
+      <p class="about__lead">Um trabalho escolar sobre o IKEA como marca global: o que é igual em todo o mundo e o que muda em cada país.</p>
+      <ul class="about__list">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span><strong>Pesquisa feita a 29 de outubro de 2026</strong>Os números podem ter mudado desde então.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span><strong>FY25 = 1 set. 2024 – 31 ago. 2025</strong>Todos os valores financeiros são deste ano financeiro, salvo indicação.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5Zm0 16h15"/></svg><span><strong>13 fontes</strong>5 da própria empresa e 8 independentes, todas com ligação.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 8"/></svg><span><strong>Fotografias com licença livre</strong>Wikimedia Commons; os autores estão nos créditos.</span></li>
+      </ul>
+      <h3 class="about__h3">Como está organizado</h3>
+      <nav class="about__nav" aria-label="Pontos do trabalho">
+        <a href="#identidade"><span>1</span>Identidade e percurso</a>
+        <a href="#geografia"><span>2</span>Geografia da empresa</a>
+        <a href="#global-local"><span>3</span>Global e local</a>
+        <a href="#balanco"><span>4</span>Balanço crítico</a>
+        <a href="#fontes"><span>5</span>Evidências e fontes</a>
+      </nav>
+      <a href="#identidade" class="btn btn--primary btn--block">Começar</a>
+      <p class="about__note">Trabalho escolar sem fins comerciais. Não é um site oficial nem tem ligação ao IKEA.</p>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- Atalhos -->
+    <section class="wrap cats" id="topo" aria-label="Atalhos do trabalho">
+      <div class="cats__track" id="cats"></div>
+    </section>
+
+    <!-- Hero -->
+    <section class="wrap hero" aria-label="Apresentação">
+      <div class="hero__main">
+        <figure class="hero__media hotspots" data-hotspots="hero" data-credit="matosinhos">
+          <img src="img/hero-matosinhos.jpg" alt="Loja IKEA de Matosinhos, com a fachada azul e amarela e o letreiro «Móveis e decoração»" width="1600" height="1200" fetchpriority="high">
+        </figure>
+        <div class="hero__box">
+          <p class="hero__kicker">Estudo de Caso 1 · Marcas Globais</p>
+          <h1>IKEA: uma marca global que se adapta ao local</h1>
+          <p class="hero__lead">Como uma marca sueca de 1943 padroniza o essencial e muda só o que cada país exige.</p>
+          <a href="#identidade" class="btn btn--dark">Começar</a>
+        </div>
+      </div>
+      <div class="hero__side">
+        <a href="#geografia" class="promo promo--blue">
+          <span class="promo__media" data-credit="armazem"><img src="img/promo-armazem.jpg" alt="Armazém self-service de uma loja IKEA" width="960" height="540"></span>
+          <span class="promo__label">
+            <span class="promo__num">44,6<small>mil M€</small></span>
+            <span class="promo__row"><span class="promo__title">Vendas totais de retalho IKEA, FY25</span><span class="circle-btn" aria-hidden="true">→</span></span>
+          </span>
+        </a>
+        <a href="#global-local" class="promo promo--red">
+          <span class="promo__media" data-credit="alfragide"><img src="img/promo-alfragide.jpg" alt="Loja IKEA de Alfragide" width="960" height="540"></span>
+          <span class="promo__label">
+            <span class="promo__num">611,4<small>M€</small></span>
+            <span class="promo__row"><span class="promo__title">Vendas do IKEA Portugal, FY25</span><span class="circle-btn" aria-hidden="true">→</span></span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Desafio -->
+    <section class="wrap challenge" aria-label="Pergunta do desafio">
+      <div class="challenge__inner">
+        <span class="challenge__tag">O desafio</span>
+        <p class="challenge__q">«Como consegue esta marca manter uma identidade global e, simultaneamente, adaptar-se aos mercados locais?»</p>
+        <a href="#conclusao" class="challenge__link">Ver a nossa resposta</a>
+      </div>
+    </section>
+
+    <!-- 1. Identidade -->
+    <section class="wrap section" id="identidade">
+      <div class="pip">
+        <div class="pip__gallery" id="gallery"></div>
+        <div class="pip__info">
+          <div class="pip__sticky">
+            <p class="eyebrow">Ponto 1 · Identidade e percurso</p>
+            <h2 class="pip__name">IKEA</h2>
+            <p class="pip__desc">Marca sueca de mobiliário e artigos para a casa, desde 1943</p>
+            <div class="pip__price">
+              <span class="price">44,6<sup>mil M€</sup></span>
+              <span class="pip__price-note">vendas totais de retalho IKEA, FY25</span>
+            </div>
+            <p class="pip__lead">O IKEA é uma marca sueca de mobiliário e artigos para a casa, criada em 1943 por Ingvar Kamprad. Hoje funciona como um sistema de franquia repartido por várias empresas.</p>
+            <div class="acc" id="facts"></div>
+            <a href="#cronologia" class="btn btn--primary btn--block">Ver a linha cronológica</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section__head section__head--sub" id="cronologia">
+        <h3>Linha cronológica</h3>
+        <span class="muted">8 momentos</span>
+      </div>
+      <div class="scroller" data-scroller>
+        <button class="scroller__btn scroller__btn--prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+        <div class="scroller__track" id="timeline"></div>
+        <button class="scroller__btn scroller__btn--next" type="button" aria-label="Seguinte"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+        <div class="scroller__bar" aria-hidden="true"><span></span></div>
+      </div>
+
+      <div class="section__head section__head--sub">
+        <h3>Campanhas</h3>
+      </div>
+      <div class="grid2">
+        <article class="campaign campaign--yellow">
+          <span class="tag">Portugal · 2018</span>
+          <h4>A casa e a «saudade»</h4>
+          <p>A comunicação do IKEA em Portugal passou a apelar à ligação à casa e à «saudade» típica portuguesa.</p>
+          <span class="src">Fonte: ECO, 2018</span>
+        </article>
+        <article class="campaign campaign--blue">
+          <span class="tag">Canadá · 2025</span>
+          <h4>“Actually, It’s IKEA”</h4>
+          <p>Com a agência Rethink, o IKEA Canadá satiriza o tom pretensioso dos anúncios de marcas de luxo.</p>
+          <span class="src">Fonte: Rethink para IKEA Canadá</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2. Geografia -->
+    <section class="wrap section" id="geografia">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">Ponto 2</p>
+          <h2>Geografia da empresa</h2>
+        </div>
+      </div>
+      <p class="lead">O IKEA vende sobretudo na Europa, mas fabrica, compra e distribui a partir de muitos países. O retalho está sobretudo no <strong>Ingka Group</strong>; a marca e o conceito pertencem ao <strong>Inter IKEA Group</strong>. Cada número abaixo indica de qual dos dois vem.</p>
+
+      <div class="chips" id="statChips" role="tablist" aria-label="Filtrar dados"></div>
+      <div class="stats" id="stats"></div>
+
+      <div class="charts">
+        <figure class="chart">
+          <figcaption>
+            <h3>Países com mais vendas do Ingka</h3>
+            <p>% das vendas do Ingka Group, FY25</p>
+          </figcaption>
+          <div class="bars" id="countryBars"></div>
+          <p class="chart__src">Fonte: Ingka, Annual Summary FY25. Portugal: estimativa do grupo a partir da ECO (16 out. 2025).</p>
+        </figure>
+        <figure class="chart">
+          <figcaption>
+            <h3>Vendas do Ingka por região</h3>
+            <p>% das vendas do Ingka Group, FY25</p>
+          </figcaption>
+          <div class="bars" id="regionBars"></div>
+          <p class="chart__src">Fonte: Ingka, Annual Summary FY25.</p>
+        </figure>
+      </div>
+
+      <div class="compare">
+        <p class="eyebrow">Três mercados comparados · indicador: % das vendas do Ingka (FY25)</p>
+        <p>A <strong>Alemanha</strong> (15,4%) é o maior mercado, à frente dos <strong>Estados Unidos</strong> (12,6%) e da <strong>França</strong> (9,0%). Juntos valem <strong>37,0%</strong> das vendas do Ingka. Dois dos três são europeus, o que confirma o peso da Europa (73,8%); Portugal fica muito atrás, com cerca de 1,6%.</p>
+        <span class="src">Fonte: Ingka, Annual Summary FY25. Soma e percentagem de Portugal: cálculo do grupo.</span>
+      </div>
+
+      <div class="section__head section__head--sub">
+        <h3>Porque distribui o IKEA as atividades por vários países?</h3>
+        <span class="muted">Fatores de localização, com dados e fontes</span>
+      </div>
+      <div class="grid3" id="reasons"></div>
+
+      <!-- Mapa -->
+      <div class="map" id="mapa">
+        <div class="section__head section__head--sub">
+          <div>
+            <h3>Mapa-mundo: onde o IKEA atua</h3>
+            <p class="muted">Carregue nos pontos para ver os dados de cada local. A Europa aparece ampliada num segundo mapa.</p>
+          </div>
+        </div>
+        <div class="map__grid">
+          <figure class="map__figure map__figure--world hotspots" data-hotspots="world">
+            <img src="img/mapa-mundo.svg" alt="Mapa-mundo: a amarelo, os cinco principais mercados (Estados Unidos, Alemanha, França, Reino Unido e Itália); a azul, os países com sede, produção, matérias-primas ou lojas referidas (Suécia, Países Baixos, Portugal, Letónia, Lituânia, Índia, China e Japão); a vermelho, a Roménia" width="1000" height="430">
+            <figcaption class="map__label">Mundo</figcaption>
+          </figure>
+          <figure class="map__figure map__figure--europe hotspots" data-hotspots="europe">
+            <img src="img/mapa-europa.svg" alt="Ampliação da Europa com Portugal, Reino Unido, Países Baixos, França, Alemanha, Itália, Suécia, Letónia, Lituânia e Roménia" width="600" height="589">
+            <figcaption class="map__label">Europa (ampliação)</figcaption>
+          </figure>
+        </div>
+        <div class="map__legend">
+          <p class="map__legend-title">Legenda</p>
+          <ul class="legend-list">
+            <li><i class="sw sw--blue"></i>Sede, produção, logística, matérias-primas ou lojas referidas no trabalho</li>
+            <li><i class="sw sw--yellow"></i>Cinco principais mercados do Ingka (% das vendas, FY25)</li>
+            <li><i class="sw sw--red"></i>Críticas ambientais (abates em florestas antigas)</li>
+            <li><i class="sw sw--grey"></i>Outros países</li>
+            <li><i class="sw-dot"></i>Ponto com os dados do local</li>
+            <li><i class="sw-box"></i>Área ampliada</li>
+          </ul>
+          <p class="chart__src">Mapa elaborado pelo grupo. Fontes dos dados geográficos: coluna «Fonte» da tabela abaixo. Base cartográfica: Natural Earth (domínio público); projeções Natural Earth (mundo) e Mercator (Europa).</p>
+        </div>
+
+        <div class="map__reading">
+          <p class="eyebrow">Leitura do mapa</p>
+          <p>A marca e as sedes estão concentradas no Norte da Europa (Älmhult, Delft e Leiden). A produção, a logística e as matérias-primas aparecem noutros países europeus e na Ásia, onde há matéria-prima (florestas da Letónia), tradição industrial (Paços de Ferreira) ou regras que obrigam a comprar localmente (Índia). Os cinco principais mercados ficam na Europa Ocidental e nos Estados Unidos: o IKEA vende sobretudo onde estão os seus clientes, com 73,8% das vendas do Ingka na Europa (FY25).</p>
+        </div>
+
+        <div class="map__table">
+          <h3>Dados do mapa</h3>
+          <div class="table-wrap">
+            <table class="table table--map">
+              <thead><tr><th>Local</th><th>Tipo</th><th>Atividade</th><th>Fonte</th></tr></thead>
+              <tbody id="mapRows"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Global e local -->
+    <section class="wrap section" id="global-local">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">Ponto 3</p>
+          <h2>Global e local: Portugal e Índia</h2>
+        </div>
+      </div>
+      <p class="lead">O IKEA mantém o nome, o conceito de design acessível e a maior parte da gama, e adapta o formato da loja, os preços, a comida e a comunicação a cada país.</p>
+
+      <div class="vs">
+        <div class="section__head section__head--sub vs__head">
+          <h3>Portugal e Índia: a presença da marca</h3>
+          <span class="muted">Comparação com dados e fontes</span>
+        </div>
+        <div class="table-wrap">
+          <table class="table table--vs">
+            <thead><tr><th></th><th>Portugal</th><th>Índia</th></tr></thead>
+            <tbody id="vsRows"></tbody>
+          </table>
+        </div>
+        <p class="vs__reading"><strong>Leitura do grupo:</strong> em Portugal, a presença é mais antiga e maior (desde 2004, com 6 lojas e uma fábrica que exporta para 21 países), e a adaptação nota-se sobretudo na comunicação e no formato das lojas. Na Índia, a presença é recente (2018), mas a adaptação é maior: mudam o menu, os preços e parte da gama. A nossa hipótese: quanto mais diferentes são os hábitos e os rendimentos, mais o IKEA adapta.</p>
+      </div>
+
+      <div class="section__head section__head--sub">
+        <h3>Exemplos de adaptação e de uniformização</h3>
+        <span class="muted">O que é global, o que é local e porquê</span>
+      </div>
+      <div class="chips" id="exChips" role="tablist" aria-label="Exemplos"></div>
+      <div class="example" id="example" role="tabpanel"></div>
+
+      <div class="prices">
+        <div class="prices__intro">
+          <p class="eyebrow">Quanto é local?</p>
+          <div class="price-tag price-tag--xl">5–10<sup>%</sup></div>
+          <p>da gama do IKEA Índia é adaptada ao mercado local, segundo uma responsável da empresa.</p>
+          <span class="src">Fonte: India Retailing. Declaração da empresa: confirmar com fonte independente.</span>
+        </div>
+        <div class="pt-data">
+          <h3>Portugal em números <span class="muted">FY25</span></h3>
+          <div class="pt-grid" id="ptGrid"></div>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature__art" aria-hidden="true">
+          <span>1974</span><span>1986</span><span>2006</span>
+        </div>
+        <div class="feature__box">
+          <p class="eyebrow">Contraprova</p>
+          <h2>O Japão mostra que a adaptação pode falhar</h2>
+          <p>O IKEA entrou no Japão em 1974, saiu ao fim de 12 anos e voltou em 2006 com foco em móveis para casas pequenas.</p>
+          <span class="src">Fonte: The Local</span>
+        </div>
+      </div>
+
+      <div class="todo">
+        <h3>Comparação de preços <span class="badge-todo">A preencher pelo grupo</span></h3>
+        <p>O mesmo artigo em ikea.com/pt e no site de outro país, com captura de ecrã e data da consulta.</p>
+        <div class="table-wrap">
+          <table class="table" id="priceTable">
+            <thead><tr><th>Artigo</th><th>Portugal (€)</th><th>Outro país</th><th>Preço local</th><th>Em €</th><th>Data</th></tr></thead>
+            <tbody>
+              <tr><td>Estante (ex.: BILLY)</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr><td>Secretária (ex.: MICKE)</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Balanço crítico -->
+    <section class="wrap section" id="balanco">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">Ponto 4</p>
+          <h2>Balanço crítico</h2>
+        </div>
+      </div>
+      <p class="lead">O IKEA traz emprego e produção para Portugal, mas é criticado por organizações ambientais pela origem da madeira. Um balanço justo apresenta as duas coisas e a resposta da empresa.</p>
+
+      <div class="grid2">
+        <article class="balance balance--good">
+          <span class="tag">Benefício possível</span>
+          <h3>Emprego e indústria em Portugal</h3>
+          <div class="price-tag">4 700</div>
+          <p>postos de trabalho diretos em Portugal: 3 200 no retalho e 1 500 na IKEA Industry.</p>
+          <p>Em Paços de Ferreira, a fábrica compra placas de MDF à Sonae Arauco e exporta 96% da produção.</p>
+          <p class="nuance"><strong>Matiz:</strong> segundo o projeto europeu URBACT, o IKEA compra madeira e outras matérias-primas a empresas locais, mas alguns negócios da cidade foram afetados pelo «fenómeno IKEA».</p>
+          <span class="src">Fontes: ECO, 15 nov. 2025; URBACT</span>
+        </article>
+        <article class="balance balance--bad">
+          <span class="tag">Problema possível</span>
+          <h3>Origem da madeira e fornecedores</h3>
+          <p>Dois relatórios ligaram o IKEA a abates destrutivos em florestas antigas da Europa, em especial na Roménia.</p>
+          <p class="reply"><strong>Resposta da empresa:</strong> o Inter IKEA disse que a sua análise não encontrou irregularidades e que as práticas de aprovisionamento são legais.</p>
+          <p>Sobre condições de trabalho, o IKEA comentou um relatório do sindicato holandês FNV sobre fornecedores na Índia, na Bulgária e no Vietname, dizendo que a maior parte das conclusões confirmava as suas próprias auditorias.</p>
+          <span class="src">Fontes: Mongabay, abr. 2024; SOMO (ano por confirmar)</span>
+        </article>
+      </div>
+
+      <div class="closing" id="conclusao">
+        <p class="eyebrow">Conclusão do grupo · resposta à pergunta do desafio</p>
+        <p class="closing__q">«Como consegue esta marca manter uma identidade global e, simultaneamente, adaptar-se aos mercados locais?»</p>
+        <h2>O IKEA padroniza o essencial e adapta-se onde os hábitos, os rendimentos ou o espaço o exigem.</h2>
+        <div class="closing__cols">
+          <div>
+            <h3>Global</h3>
+            <p>O nome, o design acessível, a maior parte da gama, o modelo de franquia e a produção em grande escala em poucos locais, como Paços de Ferreira.</p>
+          </div>
+          <div>
+            <h3>Local</h3>
+            <p>O formato das lojas (Coimbra), os preços e a comida (Índia) e a comunicação (Portugal).</p>
+          </div>
+          <div>
+            <h3>Evidência</h3>
+            <p>A gama local ronda 5% a 10% na Índia (India Retailing) e 96% da produção de Paços de Ferreira é exportada (ECO).</p>
+          </div>
+          <div>
+            <h3>Limitação</h3>
+            <p>A maior parte dos dados sobre a Índia é de 2018 e vem de declarações da empresa e da imprensa; não encontrámos dados atualizados sobre a gama local por país.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Evidências -->
+    <section class="wrap section" id="fontes">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow">Ponto 5</p>
+          <h2>Evidências e ficha de fontes</h2>
+        </div>
+        <div class="legend">
+          <span><i class="dot dot--blue"></i>Empresa (5)</span>
+          <span><i class="dot dot--yellow"></i>Independente (8)</span>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="table table--sources">
+          <thead><tr><th>Título</th><th>Entidade / autoria</th><th>Data</th><th>Tipo</th><th>Ligação</th></tr></thead>
+          <tbody id="sources"></tbody>
+        </table>
+      </div>
+      <p class="src">Ligações consultadas a 29 out. 2026 e verificadas a 16 nov. 2026. Outras fontes citadas ao longo do trabalho: Wikipédia, The Local, Pamono, Business Today, Postal, India Retailing, PYMNTS, Oman Observer (AFP), URBACT, SOMO e Rethink.</p>
+
+      <div class="grid2 mt">
+        <div class="tools" id="ferramentas">
+          <h3>Ferramentas digitais usadas</h3>
+          <ul>
+            <li><strong>Assistente de inteligência artificial (Claude, da Anthropic):</strong> usado para construir este site (código e design), desenhar o mapa a partir da tabela de dados do grupo e procurar as ligações das fontes. Não foi usado como fonte de dados: os números vêm da ficha de fontes.</li>
+            <li><strong>Natural Earth e d3-geo:</strong> base cartográfica e projeções do mapa.</li>
+            <li><strong>Wikimedia Commons:</strong> fotografias com licença livre (ver créditos abaixo).</li>
+          </ul>
+          <p class="src">As ligações e os valores principais (vendas, trabalhadores, lojas e datas) foram verificados a 16 nov. 2026.</p>
+        </div>
+        <details class="credits" id="creditos" open>
+          <summary>
+            <span><strong>Créditos das fotografias</strong> <span class="muted">Wikimedia Commons, licenças livres</span></span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <ul class="credits__list" id="credits"></ul>
+        </details>
+      </div>
+
+      <div class="obs" id="observacao">
+        <div class="obs__head">
+          <h3>Evidência ligada a Portugal: observação original do grupo</h3>
+          <span class="badge-todo">A preencher pelo grupo</span>
+        </div>
+        <p class="obs__intro">Visita a uma loja IKEA em Portugal (ou a um produto, embalagem ou campanha visível em Portugal), com fotografia, data, local e autor.</p>
+        <div class="obs__grid">
+          <figure class="obs__photo">
+            <img src="img/observacao.jpg" alt="Fotografia tirada pelo grupo numa loja IKEA em Portugal" data-fallback>
+            <figcaption class="obs__empty" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 8"/></svg>
+              <strong>Fotografia do grupo</strong>
+              <span>Guardem-na como <code>img/observacao.jpg</code> e ela aparece aqui.</span>
+            </figcaption>
+          </figure>
+          <div>
+            <dl class="obs__fields">
+              <dt>Loja ou local</dt><dd>—</dd>
+              <dt>Data</dt><dd>—</dd>
+              <dt>Autor(es)</dt><dd>—</dd>
+              <dt>O que observámos</dt><dd>—</dd>
+              <dt>Global ou local?</dt><dd>—</dd>
+            </dl>
+            <ul class="checks">
+              <li>Preço de três artigos</li>
+              <li>Língua e país de origem nas etiquetas e embalagens</li>
+              <li>O que o IKEA Food vende</li>
+              <li>Produtos ou campanhas que parecem pensados para Portugal</li>
+              <li>Comparação com o mesmo artigo no site de outro país</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="unsure" id="por-confirmar">
+        <p class="eyebrow">Nota final</p>
+        <h3>«O que não conseguimos confirmar?»</h3>
+        <ul id="unsure"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer" id="aviso">
+    <div class="wrap footer__top">
+      <div class="footer__family">
+        <h2>Estudo de Caso 1 – Marcas Globais</h2>
+        <p>Trabalho escolar sobre o IKEA. Pesquisa feita a 29 de outubro de 2026. Todos os valores financeiros são do ano financeiro 2025 (1 set. 2024 – 31 ago. 2025), salvo indicação.</p>
+        <a href="#fontes" class="btn btn--dark">Ver fontes</a>
+      </div>
+      <div class="footer__cols">
+        <details open>
+          <summary>O trabalho</summary>
+          <a href="#identidade">Identidade e percurso</a>
+          <a href="#geografia">Geografia da empresa</a>
+          <a href="#mapa">Mapa</a>
+          <a href="#global-local">Global e local</a>
+        </details>
+        <details open>
+          <summary>Análise</summary>
+          <a href="#balanco">Balanço crítico</a>
+          <a href="#conclusao">Conclusão</a>
+          <a href="#por-confirmar">Por confirmar</a>
+        </details>
+        <details open>
+          <summary>Fontes principais</summary>
+          <a href="#fontes">Ingka Group</a>
+          <a href="#fontes">Inter IKEA Group</a>
+          <a href="#fontes">ECO</a>
+          <a href="#fontes">NiT</a>
+        </details>
+      </div>
+    </div>
+    <div class="wrap footer__mid">
+      <span class="footer__country">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3Z"/></svg>
+        Portugal · Português
+      </span>
+      <a href="#topo" class="footer__top-link">Voltar ao início
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+      </a>
+    </div>
+    <div class="wrap footer__bottom">
+      <span>Trabalho escolar sem fins comerciais. Não é um site oficial nem tem ligação ao IKEA.</span>
+      <span>Logótipo IKEA © Inter IKEA Systems B.V., usado apenas para fins educativos. Fotografias: Wikimedia Commons (ver <a href="#creditos">créditos</a>). Mapa: elaborado pelo grupo com Natural Earth. <a href="#ferramentas">Ferramentas digitais usadas</a>.</span>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Voltar ao início">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Fotografia ampliada">
+    <button class="icon-btn lightbox__close" type="button" aria-label="Fechar" data-close-lightbox>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <img id="lightboxImg" src="" alt="">
+    <p class="lightbox__cap" id="lightboxCap"></p>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
