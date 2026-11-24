@@ -213,12 +213,11 @@ const examples = [
 // Portugal e Índia: a presença da marca
 const vsRows = [
   ["Entrada no país", "2004: primeira loja, em Alfragide (Postal)", "2018: primeira loja, em Hyderabad, a 9 de agosto (Quartz)"],
-  ["Lojas", "6 lojas (Alfragide, Loures, Matosinhos, Braga, Loulé e Coimbra) e 16 estúdios de planificação (NiT, 2026; ECO, 2025)", "Primeira loja em Hyderabad; não encontrámos o número atual de lojas"],
+  ["Lojas", "6 lojas (Alfragide, Loures, Matosinhos, Braga, Loulé e Coimbra) e 16 estúdios de planificação (NiT, 2026; ECO, 2025)", "Primeira loja em Hyderabad (Quartz, 2018)"],
   ["Produção", "Fábrica em Paços de Ferreira: 1 500 pessoas e 96% da produção exportada (ECO, 2025)", "A lei obriga a comprar localmente pelo menos 30% das matérias-primas em cinco anos (World Economic Forum, 2018)"],
   ["Gama", "Gama global; em Coimbra, formato compacto com cerca de 2 000 artigos (NiT, 2026)", "5% a 10% da gama adaptada ao mercado local (India Retailing)"],
   ["Comida", "IKEA Food com almôndegas e cachorros-quentes, como no resto do mundo (NiT, 2026)", "Biryani, samosas e almôndegas de frango ou de legumes (Quartz; PYMNTS, 2018)"],
-  ["Comunicação", "Apelo à casa e à «saudade» portuguesa (ECO, 2018)", "Não recolhemos dados"],
-  ["Vendas e emprego", "611,4 M€ de vendas e 3 224 colaboradores no retalho (ECO, FY25)", "Não encontrámos dados de vendas; serviço de montagem com 150 pessoas (Oman Observer/AFP)"]
+  ["Vendas e emprego", "611,4 M€ de vendas e 3 224 colaboradores no retalho (ECO, FY25)", "Serviço de montagem com 150 pessoas (Oman Observer/AFP)"]
 ];
 
 const ptData = [
@@ -404,13 +403,6 @@ $("sources").innerHTML = sources.map(s => {
 
 // Fontes das fotografias colocadas no HTML
 document.querySelectorAll("[data-credit]").forEach(el => el.insertAdjacentHTML("beforeend", creditTag(el.dataset.credit)));
-
-// Fotografia da observação original: mostra o aviso enquanto o grupo não a guardar
-document.querySelectorAll("img[data-fallback]").forEach(img => {
-  const fail = () => { img.hidden = true; img.nextElementSibling.hidden = false; };
-  img.addEventListener("error", fail);
-  if (img.complete && !img.naturalWidth) fail();
-});
 
 $("unsure").innerHTML = unsure.map(u => `<li><strong>${u[0]}.</strong> ${u[1]}</li>`).join("");
 
