@@ -404,7 +404,28 @@ $("sources").innerHTML = sources.map(s => {
 // Fontes das fotografias colocadas no HTML
 document.querySelectorAll("[data-credit]").forEach(el => el.insertAdjacentHTML("beforeend", creditTag(el.dataset.credit)));
 
-$("unsure").innerHTML = unsure.map(u => `<li><strong>${u[0]}.</strong> ${u[1]}</li>`).join("");
+// Vídeos das campanhas: o YouTube só é contactado quando se carrega no botão.
+// Aberto com duplo clique (file://) o YouTube recusa vídeos incorporados, por isso abre noutro separador.
+document.querySelectorAll(".video[data-yt]").forEach(fig => {
+  const btn = fig.querySelector(".video__play");
+  btn.addEventListener("click", () => {
+    const id = fig.dataset.yt, start = +(fig.dataset.start || 0);
+    if (!/^https?:$/.test(location.protocol)) {
+      window.open(`https://www.youtube.com/watch?v=${id}` + (start ? `&t=${start}s` : ""), "_blank", "noopener");
+      return;
+    }
+    const f = document.createElement("iframe");
+    f.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1` + (start ? `&start=${start}` : "");
+    f.title = btn.getAttribute("aria-label");
+    f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+    f.allowFullscreen = true;
+    f.referrerPolicy = "strict-origin-when-cross-origin";
+    btn.replaceWith(f);
+    f.focus();
+  });
+});
+
+$("unsure").innerHTML =unsure.map(u => `<li><strong>${u[0]}.</strong> ${u[1]}</li>`).join("");
 
 $("credits").innerHTML = Object.values(credits).map(c => `
   <li>

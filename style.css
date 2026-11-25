@@ -517,6 +517,25 @@ a:hover .circle-btn { transform: translateX(4px); }
 .campaign--blue .src { color: rgba(255, 255, 255, .8); }
 @media (max-width: 600px) { .campaign { padding: 28px 24px; min-height: 0; } }
 
+/* Vídeos das campanhas: o YouTube só carrega depois de se carregar no botão */
+.video { margin: 20px 0 0; position: relative; }
+.video__play, .video iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 4px; }
+.video__play {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 16px;
+  background: radial-gradient(120% 90% at 50% 40%, #2a2a2a, var(--black)); color: var(--white); text-align: center;
+}
+.video__icon { width: 64px; height: 64px; border-radius: 50%; background: var(--yellow); display: grid; place-items: center; transition: transform .25s var(--ease-out); }
+.video__icon svg { width: 28px; height: 28px; fill: var(--black); stroke: none; margin-left: 3px; }
+.video__play:hover .video__icon { transform: scale(1.08); }
+.video__play:focus-visible { outline: 3px solid var(--white); outline-offset: -6px; }
+.video__t { font-weight: 700; font-size: 18px; line-height: 1.25; margin-top: 4px; }
+.video__m { font-size: 13px; color: rgba(255, 255, 255, .75); }
+.video iframe { background: var(--black); }
+.video figcaption { margin-top: 8px; font-size: 13px; }
+.video figcaption a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 600px) { .video__icon { width: 52px; height: 52px; } .video__t { font-size: 16px; } }
+@media print { .video__play { display: none; } }
+
 /* ---------- Chips (filtros) ---------- */
 .chips { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 24px; scrollbar-width: none; }
 .chips::-webkit-scrollbar { display: none; }
